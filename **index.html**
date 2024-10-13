@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>심리 상태 검사</title> <!-- 페이지 제목을 "심리 상태 검사"로 변경 -->
+    <title>심리 상태 검사</title>
     <style>
         /* 본문에 사용할 폰트 (UhBee mysen Bold) */
         @font-face {
@@ -67,6 +67,9 @@
             font-weight: bold;
             color: red;
             font-size: 1.25rem;
+            text-align: center;
+            display: none;
+            white-space: pre-line; /* 줄바꿈을 적용하기 위해 설정 */
         }
 
         /* 버튼 스타일 */
@@ -97,7 +100,7 @@
     </style>
 </head>
 <body>
-    <h1>심리 상태 검사</h1>
+    <h1 id="pageTitle">심리 상태 검사</h1>
     <form id="testForm">
         <div class="question">
             <input type="checkbox" id="q1" name="q1">
@@ -163,8 +166,18 @@
                 result += "은 행복하군요! 앞으로도 행복하길 응원할게요:)";
             }
 
-            // 결과 출력
-            document.getElementById("resultText").innerText = result;
+            // 질문 폼과 제목 숨기기
+            document.getElementById("testForm").style.display = "none";
+            document.getElementById("pageTitle").style.display = "none";
+
+            // 결과에서 '!' 기점으로 두 줄로 나누기
+            const resultParts = result.split('!');
+            const finalResult = resultParts[0] + "!\n" + resultParts[1];
+
+            // 결과 표시
+            const resultText = document.getElementById("resultText");
+            resultText.innerText = finalResult;
+            resultText.style.display = "block";
         }
     </script>
 </body>
