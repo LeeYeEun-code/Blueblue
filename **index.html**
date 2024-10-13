@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -42,24 +43,30 @@
         }
 
         form {
-            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
-            width: 0%;
+            width: 100%;
             max-width: 400px;
-            box-sizing: border-box; /* Add this to make sure padding is considered in width calculation */
+            box-sizing: border-box;
+            text-align: left; /* 폼 내용을 왼쪽 정렬 */
         }
 
         .question {
             margin-bottom: 15px;
-            font-size: 1.2rem; /* Adjusted for mobile readability */
+            font-size: 1.2rem;
+            display: block; /* 체크박스와 레이블을 일렬로 정렬하기 위해 block으로 설정 */
+        }
+
+        .question label {
+            display: inline-block;
+            margin-left: 10px;
         }
 
         .result {
             margin-top: 20px;
             font-weight: bold;
             color: red;
-            font-size: 1.25rem; /* Adjusted font size */
+            font-size: 1.25rem;
         }
 
         /* 버튼 스타일 */
@@ -72,6 +79,7 @@
             font-size: 1.1rem;
             cursor: pointer;
             width: 100%;
+            font-family: inherit;
         }
 
         button:hover {
@@ -80,11 +88,11 @@
 
         input[type="checkbox"] {
             transform: scale(1.5); /* 체크박스 크기 확대 */
-            margin-right: 10px;
+            vertical-align: middle;
         }
 
         label {
-            font-size: 1rem; /* Adjusted font size for readability */
+            font-size: 1rem;
         }
     </style>
 </head>
