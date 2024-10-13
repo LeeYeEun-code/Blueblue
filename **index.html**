@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>심리 상태 검사</title>
+    <title>심리 상태 검사</title> <!-- 페이지 제목을 "심리 상태 검사"로 변경 -->
     <style>
         /* 본문에 사용할 폰트 (UhBee mysen Bold) */
         @font-face {
@@ -48,13 +48,13 @@
             width: 100%;
             max-width: 400px;
             box-sizing: border-box;
-            text-align: left; /* 폼 내용을 왼쪽 정렬 */
+            text-align: left;
         }
 
         .question {
             margin-bottom: 15px;
             font-size: 1.2rem;
-            display: block; /* 체크박스와 레이블을 일렬로 정렬하기 위해 block으로 설정 */
+            display: block;
         }
 
         .question label {
@@ -87,7 +87,7 @@
         }
 
         input[type="checkbox"] {
-            transform: scale(1.5); /* 체크박스 크기 확대 */
+            transform: scale(1.5);
             vertical-align: middle;
         }
 
